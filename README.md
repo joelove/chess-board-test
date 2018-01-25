@@ -1,12 +1,10 @@
-# Employee Portal Architectural Example
+# Chess Board Test
 
-An example project showcasing some the basic architecture of the Investor Services Employee Portal.
-
-> *This code-base has been simplified _a lot_ to protect the intellectual property of our client and make it more easily understood.*
+A simple React application to teach chess board square designations.
 
 ## Frameworks
 
-Below you'll find a list of frameworks used in this example project.
+Below you'll find a list of frameworks used in this project.
 
 ### React
 
@@ -19,10 +17,6 @@ Redux is [a predictable state container for JavaScript applications](https://red
 ### Redux Saga
 
 `redux-saga` is [a library that aims to make application side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) easier to manage](https://github.com/redux-saga/redux-saga), more efficient to execute, simple to test, and better at handling failures. This means sagas are where all of the functional code lives (anything that _does_ something).
-
-### Normalizr
-
-Normalizr is [a small but powerful utility for taking JSON with a schema definition and returning dictionaries of nested entities keyed by their IDs](https://github.com/paularmstrong/normalizr). This means deeply nested data provided by 3rd-party services such as APIs can be much more easily stored, restructured, presented to users, updated, and utilised for further service requests.
 
 ### Reselect
 
@@ -70,7 +64,7 @@ You will need [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) i
 
 ### Installing the application
 
-Installing the application should be as easy as:
+To install the application, run:
 
 ```
 npm install
@@ -86,7 +80,7 @@ npm start
 
 ### Testing the application
 
-**There are no unit tests included with this example** as they only really appeal to the nerdy types anyway, but if there were you would just run:
+To run the application test suite, use:
 
 ```
 npm test
