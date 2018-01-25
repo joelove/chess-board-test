@@ -1,6 +1,8 @@
-/* eslint-disable quote-props, no-unused-vars */
+/* eslint-disable quote-props, no-unused-vars, object-shorthand, func-names */
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 const path = require('path');
 
 const BabelPresetEnv = require('@babel/preset-env');
@@ -54,9 +56,29 @@ module.exports = {
           }
         },
       },
+      {
+        test: /\.scss$/,
+        exclude: /(node_modules)/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            { loader: 'css-loader' },
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: function () {
+                  return [autoprefixer('> 1%', 'last 2 versions', 'IE 10')];
+                },
+              },
+            },
+            { loader: 'sass-loader' },
+          ],
+        }),
+      },
     ],
   },
   plugins: [
+    new ExtractTextPlugin('css/[name].css'),
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),
