@@ -9,8 +9,6 @@ const BabelPresetEnv = require('@babel/preset-env');
 const BabelPresetReact = require('@babel/preset-react');
 const babelOptions = require('./.babelrc');
 
-const targets = { browsers: ['> 1%', 'last 2 versions', 'IE 10'] };
-
 module.exports = {
   entry: './index.js',
   output: {
