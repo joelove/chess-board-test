@@ -32,6 +32,8 @@ module.exports = {
       'selectors': path.join(__dirname, 'selectors'),
       'services': path.join(__dirname, 'services'),
       'store': path.join(__dirname, 'store'),
+      'assets': path.join(__dirname, 'assets'),
+      'styles': path.join(__dirname, 'assets/styles'),
     },
   },
   module: {

@@ -1,0 +1,32 @@
+@import '~styles/shared/index';
+
+$board-size: 60vh;
+$border-size: 3.75vh;
+$square-size: $board-size / 8;
+$margin-size: (100vh - $board-size - ($border-size * 2)) / 2;
+
+.board {
+  margin: $margin-size auto;
+  border: $border-size $millbrook solid;
+  border-collapse: seperate;
+  border-spacing: 0;
+}
+
+.board__square {
+  width: $square-size;
+  height: $square-size;
+  padding: 0;
+  background-color: $pampas;
+}
+
+.board__rank:nth-child(even) {
+  .board__square:nth-child(odd) {
+    background-color: $birch;
+  }
+}
+
+.board__rank:nth-child(odd) {
+  .board__square:nth-child(even) {
+    background-color: $birch;
+  }
+}

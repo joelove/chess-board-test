@@ -5,7 +5,7 @@ import { map } from 'lodash';
 import { BoardActions } from 'actions';
 import { boardSelector } from 'selectors';
 
-import './board-container.scss';
+import 'styles/containers/board-container.scss';
 
 const ranks = [8, 7, 6, 5, 4, 3, 2, 1];
 const files = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];

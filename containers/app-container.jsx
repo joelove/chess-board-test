@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import createBemClass from 'react-bem-builder';
 
-import './app-container.scss';
+import 'styles/global/index.scss';
 
 const AppContainer = ({ block, children }) => (
   <div className={block()}>
