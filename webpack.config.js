@@ -7,8 +7,9 @@ const path = require('path');
 
 const BabelPresetEnv = require('@babel/preset-env');
 const BabelPresetReact = require('@babel/preset-react');
+const babelOptions = require('./.babelrc');
 
-const targets = { browsers: ['> 1%', 'last 2 versions'] };
+const targets = { browsers: ['> 1%', 'last 2 versions', 'IE 10'] };
 
 module.exports = {
   entry: './index.js',
@@ -43,19 +44,7 @@ module.exports = {
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: [
-              [BabelPresetEnv, { targets }],
-              [BabelPresetReact],
-            ],
-            plugins: [
-              '@babel/plugin-transform-runtime',
-              '@babel/plugin-proposal-export-namespace-from',
-              '@babel/plugin-proposal-export-default-from',
-              '@babel/plugin-proposal-class-properties',
-              '@babel/plugin-proposal-object-rest-spread',
-            ].map(require.resolve),
-          }
+          options: babelOptions,
         },
       },
       {

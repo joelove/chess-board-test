@@ -1,0 +1,3 @@
+--require test/setup/register.js
+--recursive
+--watch
